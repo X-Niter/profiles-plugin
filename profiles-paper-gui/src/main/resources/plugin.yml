@@ -1,8 +1,10 @@
 name: ProfilesPaperGui
 version: 1.1.7
-main: com.awooga.profiles.ProfilesPaperGuiPlugin
+main: com.awooga.ProfilesPaperGui.ProfilesPaperGui
 api-version: 1.13
-depend: [PlaceholderAPI, ProfilesPaperCore]
+prefix: ProfilesGui
+authors: [ 4444, X_Niter ]
+depend: [PlaceholderAPI]
 commands:
   profiles:
     description: Main command to switch user profiles

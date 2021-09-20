@@ -1,6 +1,8 @@
 package com.awooga.profiles;
 
+import com.awooga.ProfilesPaperCore.ProfilesPaperCore;
 import com.google.inject.*;
+import lombok.SneakyThrows;
 import org.bukkit.plugin.Plugin;
 
 public class ProfilesPaperDisablerModule extends AbstractModule {
@@ -25,8 +27,9 @@ public class ProfilesPaperDisablerModule extends AbstractModule {
 
 	@Provides
 	@Singleton
-	ProfilesPaperCoreSDK providePaperCoreSdk() {
-		return ProfilesPaperCoreSDK.getInstance();
+	@SneakyThrows
+	ProfilesPaperCore providePaperCoreSdk() {
+		return providePaperCoreSdk().getProfilesCore();
 	}
 
 }

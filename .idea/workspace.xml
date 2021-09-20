@@ -23,8 +23,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f6b5723-1a9e-4b55-9ac6-234a284dab9f" name="Default Changelist" comment="1.1.6: Change communication protocol to make uuid switching less confusing for Paper">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/dao/impl/PlayerProfilesDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/dao/impl/PlayerProfilesDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/profiles-paper-gui/profiles.profiles-paper-gui.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles-paper-disabler/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesPaperGui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/sql/DbConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/sql/DbCredentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/sql/DbManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/util/ConsoleOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/util/ConsoleStringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/profiles-paper-core/profiles.profiles-paper-core.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/profiles-paper-disabler/profiles.profiles-paper-disabler.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/profiles-waterfall/profiles.profiles-waterfall.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/profiles-waterfall/profiles.profiles-waterfall.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-core/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/java/com/awooga/profiles/ProfilesPaperCoreMessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/core/CoreMessageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/java/com/awooga/profiles/ProfilesPaperCoreModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/java/com/awooga/profiles/ProfilesPaperCorePlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/java/com/awooga/profiles/ProfilesPaperCoreSDK.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/java/com/awooga/profiles/events/PlayerUUIDOverrideEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/events/PlayerUUIDOverrideEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/resources/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-disabler/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-disabler/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-disabler/src/main/java/com/awooga/profiles/ProfilesPaperDisablerEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-disabler/src/main/java/com/awooga/profiles/ProfilesPaperDisablerEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-disabler/src/main/java/com/awooga/profiles/ProfilesPaperDisablerModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-disabler/src/main/java/com/awooga/profiles/ProfilesPaperDisablerModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/dependencies/MMOCore-1.4.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/feature-requests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ConfigurationDelegator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/HookExecutionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/HookExecutionHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilePlayerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilePlayerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesAdminCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesAdminCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesCommand2.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesCommand2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesCommandState.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesCommandState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesPaperGuiEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesPaperGuiEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesPaperGuiModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesPaperGuiPlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesPlaceholderExpansion.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesPlaceholderExpansion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/ChestGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/ChestGui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/ChestGuiGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/ChestGuiGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/DefaultStatefulItemStackSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/DefaultStatefulItemStackSupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/StatefulItemStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/StatefulItemStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/StatefulItemStackSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/StatefulItemStackSupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/TextSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/TextSupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/dao/PlayerProfilesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/dao/PlayerProfilesDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/dao/ProfileEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/dao/ProfileEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/dao/impl/PlayerProfilesDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/dao/impl/PlayerProfilesDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/BoundFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/BoundFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/BoundUserFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/BoundUserFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/BukkitEventFSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/BukkitEventFSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/EventFSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/EventFSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/core/DumbFSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/core/DumbFSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/core/EventType.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/core/EventType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/core/OnTransitLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/core/OnTransitLambda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/core/Transition.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/core/Transition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/events/BukkitCommandEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/events/BukkitCommandEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/util/HiddenStringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/util/HiddenStringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-waterfall/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/ProfilesWaterfallEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/ProfilesWaterfallEventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/ProfilesWaterfallModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/ProfilesWaterfallPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/ProfilesWaterfall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/SetUUIDCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/SetUUIDCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/UUIDSetterHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/UUIDSetterHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/dao/ProfileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/dao/ProfileDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/dao/impl/ProfileDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/dao/impl/ProfileDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +128,9 @@
         <task path="$PROJECT_DIR$/profiles-common">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/profiles-paper-disabler">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -64,47 +141,36 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="profiles" type="f1a62948:ProjectNode" />
+                <item name="profiles-paper-gui" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="profiles" type="f1a62948:ProjectNode" />
+                <item name="profiles-paper-gui" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="profiles" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="profiles" type="f1a62948:ProjectNode" />
+                <item name="profiles-paper-gui" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="shadow" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="profiles" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="profiles-waterfall" type="2d1252cf:ModuleNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="profiles" type="f1a62948:ProjectNode" />
-                <item name="profiles-paper-gui" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="profiles" type="f1a62948:ProjectNode" />
-                <item name="profiles-paper-gui" type="2d1252cf:ModuleNode" />
+                <item name="profiles-waterfall" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="profiles" type="f1a62948:ProjectNode" />
-                <item name="profiles-paper-gui" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="profiles" type="f1a62948:ProjectNode" />
-                <item name="profiles-paper-gui" type="2d1252cf:ModuleNode" />
+                <item name="profiles-waterfall" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="shadow" type="c8890929:TasksNode$1" />
               </path>
@@ -132,6 +198,14 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="KubernetesApiPersistence">
     <option name="context" value="admin@markkit" />
     <option name="namespace" value="default" />
@@ -153,14 +227,28 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/profile-plugin-test/waterfall/dev-profile-plugin.sh" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.awooga.profiles.fsm.core" />
+      <recent name="com.awooga.profiles" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\RPG-ProfilePlugin-StoneLegion\profiles-paper-core" />
+      <recent name="D:\RPG-ProfilePlugin-StoneLegion\profiles-paper-disabler" />
+      <recent name="D:\RPG-ProfilePlugin-StoneLegion\profiles-paper-gui" />
+      <recent name="X:\Users\Liam\IdeaProjects\minecraft-profiles-plugin\profiles-paper-gui\dependencies" />
+      <recent name="X:\Users\Liam\IdeaProjects\minecraft-profiles-plugin\profiles-paper-disabler\src\main\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Liam\IdeaProjects\ProfilesPlugin\profiles-paper\src\main\java\com\awooga\profiles" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.awooga.profiles.fsm" />
     </key>
@@ -170,20 +258,6 @@
       <recent name="com.awooga.profiles.fsm" />
       <recent name="com.awooga.profiles.fsm.core" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Liam\IdeaProjects\ProfilesPlugin\profiles-paper\src\main\java\com\awooga\profiles" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.awooga.profiles.fsm.core" />
-      <recent name="com.awooga.profiles" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="X:\Users\Liam\IdeaProjects\minecraft-profiles-plugin\profiles-paper-gui\dependencies" />
-      <recent name="X:\Users\Liam\IdeaProjects\minecraft-profiles-plugin\profiles-paper-disabler\src\main\resources" />
-      <recent name="X:\Users\Liam\IdeaProjects\minecraft-profiles-plugin\profiles-paper-disabler" />
-      <recent name="X:\Users\Liam\IdeaProjects\minecraft-profiles-plugin" />
-      <recent name="X:\Users\Liam\IdeaProjects\minecraft-profiles-plugin\profiles-common" />
-    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -192,7 +266,7 @@
       <command value="gradle init" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.minecraft-profiles-plugin [shadowJar]">
+  <component name="RunManager" selected="Gradle.RPG-ProfilePlugin-StoneLegion:profiles-paper-gui [shadowJar]">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -204,7 +278,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="minecraft-profiles-plugin [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RPG-ProfilePlugin-StoneLegion [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -215,7 +289,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="jar" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -225,10 +299,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="minecraft-profiles-plugin [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RPG-ProfilePlugin-StoneLegion:profiles-paper-core [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/profiles-paper-core" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -246,7 +320,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="minecraft-profiles-plugin:profiles-paper-gui [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RPG-ProfilePlugin-StoneLegion:profiles-paper-gui [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/profiles-paper-gui" />
@@ -257,7 +331,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -267,7 +341,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="minecraft-profiles-plugin:profiles-paper-gui [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RPG-ProfilePlugin-StoneLegion:profiles-paper-gui [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/profiles-paper-gui" />
@@ -278,7 +352,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="jar" />
+            <option value="shadowJar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -288,10 +362,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="minecraft-profiles-plugin:profiles-paper-gui [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RPG-ProfilePlugin-StoneLegion:profiles-waterfall [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/profiles-paper-gui" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/profiles-waterfall" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -310,6 +384,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Paper-1" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
       <option name="SCRIPT_PATH" value="$USER_HOME$/Downloads/profile-plugin-test/paper-1/dev-profiles-plugin.sh" />
       <option name="SCRIPT_OPTIONS" value="" />
@@ -319,10 +394,12 @@
       <option name="INTERPRETER_PATH" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
       <envs />
       <method v="2" />
     </configuration>
     <configuration name="Paper-2" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
       <option name="SCRIPT_PATH" value="$USER_HOME$/Downloads/profile-plugin-test/paper-2/dev-profiles-plugin.sh" />
       <option name="SCRIPT_OPTIONS" value="" />
@@ -332,10 +409,12 @@
       <option name="INTERPRETER_PATH" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
       <envs />
       <method v="2" />
     </configuration>
     <configuration name="Spigot-1" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
       <option name="SCRIPT_PATH" value="$USER_HOME$/Downloads/profile-plugin-test/spigot-1/dev.sh" />
       <option name="SCRIPT_OPTIONS" value="" />
@@ -345,10 +424,12 @@
       <option name="INTERPRETER_PATH" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
       <envs />
       <method v="2" />
     </configuration>
     <configuration name="Waterfall" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
       <option name="SCRIPT_PATH" value="$USER_HOME$/Downloads/profile-plugin-test/waterfall/dev-profile-plugin.sh" />
       <option name="SCRIPT_OPTIONS" value="" />
@@ -358,16 +439,17 @@
       <option name="INTERPRETER_PATH" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
       <envs />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Gradle.ProfilesPlugin build" />
-      <item itemvalue="Gradle.minecraft-profiles-plugin:profiles-paper-gui [jar]" />
-      <item itemvalue="Gradle.minecraft-profiles-plugin [jar]" />
-      <item itemvalue="Gradle.minecraft-profiles-plugin [shadowJar]" />
-      <item itemvalue="Gradle.minecraft-profiles-plugin:profiles-paper-gui [build]" />
-      <item itemvalue="Gradle.minecraft-profiles-plugin:profiles-paper-gui [shadowJar]" />
+      <item itemvalue="Gradle.RPG-ProfilePlugin-StoneLegion:profiles-waterfall [shadowJar]" />
+      <item itemvalue="Gradle.RPG-ProfilePlugin-StoneLegion:profiles-paper-gui [shadowJar]" />
+      <item itemvalue="Gradle.RPG-ProfilePlugin-StoneLegion:profiles-paper-core [shadowJar]" />
+      <item itemvalue="Gradle.RPG-ProfilePlugin-StoneLegion [clean]" />
+      <item itemvalue="Gradle.RPG-ProfilePlugin-StoneLegion:profiles-paper-gui [clean]" />
       <item itemvalue="Shell Script.Waterfall" />
       <item itemvalue="Shell Script.Paper-1" />
       <item itemvalue="Shell Script.Paper-2" />
@@ -375,11 +457,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.minecraft-profiles-plugin [shadowJar]" />
-        <item itemvalue="Gradle.minecraft-profiles-plugin [shadowJar]" />
-        <item itemvalue="Gradle.minecraft-profiles-plugin:profiles-paper-gui [shadowJar]" />
-        <item itemvalue="Gradle.minecraft-profiles-plugin:profiles-paper-gui [build]" />
-        <item itemvalue="Gradle.minecraft-profiles-plugin [jar]" />
+        <item itemvalue="Gradle.RPG-ProfilePlugin-StoneLegion:profiles-paper-gui [shadowJar]" />
+        <item itemvalue="Gradle.RPG-ProfilePlugin-StoneLegion:profiles-waterfall [shadowJar]" />
+        <item itemvalue="Gradle.RPG-ProfilePlugin-StoneLegion [clean]" />
+        <item itemvalue="Gradle.RPG-ProfilePlugin-StoneLegion:profiles-paper-core [shadowJar]" />
+        <item itemvalue="Gradle.RPG-ProfilePlugin-StoneLegion:profiles-paper-gui [clean]" />
       </list>
     </recent_temporary>
   </component>

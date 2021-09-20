@@ -3,11 +3,10 @@ repositories {
         name = 'sonatype'
         url = 'https://oss.sonatype.org/content/groups/public/'
     }
-    /*
     maven {
         name = 'destroystokyo-repo'
         url = 'https://repo.destroystokyo.com/repository/maven-public/'
-    }*/
+    }
     maven {
         name = 'bungeecord-repo'
         url = 'https://oss.sonatype.org/content/repositories/snapshots'
@@ -15,39 +14,34 @@ repositories {
 }
 
 dependencies {
-    compile project(':profiles-common')
-    //compileOnly 'io.github.waterfallmc:waterfall-api:1.15-SNAPSHOT'
-    compileOnly 'net.md-5:bungeecord-api:1.15-SNAPSHOT'
+    implementation project(':profiles-common')
+    compileOnly 'io.github.waterfallmc:waterfall-api:1.17-R0.1-SNAPSHOT'
+    //compileOnly 'net.md-5:bungeecord-api:1.16-R0.4'
 
-    compile 'com.google.inject:guice:4.0'
-    shadow 'com.google.inject:guice:4.0'
-    compile 'javax.inject:javax.inject:1'
-    shadow 'javax.inject:javax.inject:1'
-    compile 'aopalliance:aopalliance:1.0'
-    shadow 'aopalliance:aopalliance:1.0'
-    compile 'org.apache.commons:commons-lang3:3.9'
-    shadow 'org.apache.commons:commons-lang3:3.9'
-    compile 'org.projectlombok:lombok:1.18.12'
-    shadow 'org.projectlombok:lombok:1.18.12'
+    implementation 'javax.inject:javax.inject:1'
+    implementation 'aopalliance:aopalliance:1.0'
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'org.projectlombok:lombok:1.18.20'
 
-    annotationProcessor 'org.projectlombok:lombok:1.18.12'
-    testCompileOnly 'org.projectlombok:lombok:1.18.12'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    testCompileOnly 'org.projectlombok:lombok:1.18.20'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
 }
-
+/*
 processResources {
     from(sourceSets.main.resources.srcDirs) {
         expand 'version': project.version
     }
 }
 
+ */
+
 shadowJar {
     dependencies {
         include(dependency(':profiles-common'))
-        include(dependency('com.google.inject:guice:4.0'))
         include(dependency('javax.inject:javax.inject:1'))
         include(dependency('aopalliance:aopalliance:1.0'))
-        include(dependency('org.apache.commons:commons-lang3:3.9'))
-        include(dependency('org.projectlombok:lombok:1.18.12'))
+        include(dependency('org.apache.commons:commons-lang3:3.12.0'))
+        include(dependency('org.projectlombok:lombok:1.18.20'))
     }
 }

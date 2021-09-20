@@ -1,6 +1,11 @@
 # This plugin MUST use mysql as it requires cross-server database
 mysql:
   connector: "jdbc:mysql://127.0.0.1:3306/profilesplugin?user=testuser&password=testpass&autoReconnect=true"
+  host: "127.0.0.1"
+  user: "testuser"
+  password: "testpass"
+  DbName: "profilesplugin"
+  port: 3306
 
 options:
   # the max profile slot limit applies to all groups, including admins/op. There is a hard limit of 15. You can configure different limits for different roles
@@ -45,7 +50,7 @@ hooks:
   # pre-existing profiles (unless your permissions plugin supports players inheriting from other players. Luckperms does not)
   # onSwitchProfile does *NOT* run when the user switches to the genuine/mojang profile.
   onSwitchProfile:
-    - "say User %player_name% has switched to profile %playerprofiles_profiPlayerProfilesDAOImplleuuid%. Their real UUID: %playerprofiles_genuineuuid%"
+    - "say User %player_name% has switched to profile %playerprofiles_profileuuid%. Their real UUID: %playerprofiles_genuineuuid%"
     - "lp user %playerprofiles_genuineuuid% clone %playerprofiles_profileuuid%"
   # onDeleteProfile runs when the user deletes a profile. The user cannot delete a profile when they have that profile
   # selected, so the deleteduuid and profileuuid are guaranteed to be different.
