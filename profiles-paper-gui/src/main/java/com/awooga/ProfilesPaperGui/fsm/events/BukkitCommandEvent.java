@@ -21,6 +21,7 @@ public class BukkitCommandEvent extends Event {
 	String label;
 	String[] args;
 
+
 	@Override
 	@NotNull
 	public HandlerList getHandlers() {

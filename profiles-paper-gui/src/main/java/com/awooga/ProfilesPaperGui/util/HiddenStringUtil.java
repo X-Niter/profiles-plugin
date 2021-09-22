@@ -32,7 +32,7 @@ public class HiddenStringUtil {
 		Gson gson = new Gson();
 		String json = gson.toJson(data);
 		String newLore = encodeString(json);
-		Bukkit.getLogger().info("Putting new lore: "+newLore);
+		//Bukkit.getLogger().info("Putting new lore: "+newLore);
 		if(lore.size() > 0) {
 			lore.set(0, newLore + lore.get(0));
 		} else {
@@ -51,9 +51,9 @@ public class HiddenStringUtil {
 		for(String relevantLore : lore) {
 			//String relevantLore = lore.get(lore.size() - 1);
 			Gson gson = new Gson();
-			Bukkit.getLogger().info("Pulling string from: " + relevantLore);
+			//Bukkit.getLogger().info("Pulling string from: " + relevantLore);
 			String hiddenString = extractHiddenString(relevantLore);
-			Bukkit.getLogger().info("Got hidden string: " + hiddenString);
+			//Bukkit.getLogger().info("Got hidden string: " + hiddenString);
 			if(hiddenString == null) {
 				continue;
 			}
@@ -103,38 +103,38 @@ public class HiddenStringUtil {
 
 		int start = input.indexOf(SEQUENCE_HEADER);
 		int end = input.indexOf(SEQUENCE_FOOTER);
-		Bukkit.getLogger().info("Got start and end: "+start+", "+end);
+		//Bukkit.getLogger().info("Got start and end: "+start+", "+end);
 
 		if (start < 0 || end < 0) {
 			return null;
 		}
 
 		String extracted = input.substring(start + SEQUENCE_HEADER.length(), end);
-		Bukkit.getLogger().info("Extracted subsequence: "+extracted);
+		//Bukkit.getLogger().info("Extracted subsequence: "+extracted);
 		return extracted;
 	}
 
 	private static String stringToColors(String normal) {
 		if (normal == null) return null;
-		Bukkit.getLogger().info("Putting string: "+normal);
+		//Bukkit.getLogger().info("Putting string: "+normal);
 
 		byte[] bytes = normal.getBytes(StandardCharsets.UTF_8);
-		Bukkit.getLogger().info("Bytes length: "+bytes.length);
+		//Bukkit.getLogger().info("Bytes length: "+bytes.length);
 		char[] chars = new char[bytes.length * 4];
 
 		StringBuilder sb = new StringBuilder();
 		sb.ensureCapacity(bytes.length * 4);
 
-		boolean debug = !normal.equals("null");
+		//boolean debug = !normal.equals("null");
 
 		for (byte aByte : bytes) {
 			char[] hex = byteToHex(aByte);
 
-			if (debug) {
+			/*if (debug) {
 				Bukkit.getLogger().info("got hex: " + Arrays.toString(hex));
 				Bukkit.getLogger().info("got hex2: " + hex[0]);
 				Bukkit.getLogger().info("got hex2: " + hex[1]);
-			}
+			}*/
 
 			sb.append(COLOR_CHAR);
 			sb.append(hex[0]);
@@ -144,9 +144,9 @@ public class HiddenStringUtil {
 		}
 
 
-		Bukkit.getLogger().info("Generated chars: "+sb.length());
-		Bukkit.getLogger().info("Generated chars2: "+sb.toString());
-		Bukkit.getLogger().info("Generated chars3: "+sb.toString().length());
+		//Bukkit.getLogger().info("Generated chars: "+sb.length());
+		//Bukkit.getLogger().info("Generated chars2: "+sb.toString());
+		//Bukkit.getLogger().info("Generated chars3: "+sb.toString().length());
 
 
 		return sb.toString();
@@ -172,11 +172,7 @@ public class HiddenStringUtil {
 	}
 
 	private static int hexToUnsignedInt(char c) {
-		//if (c >= '0'+CHAR_OFFSET && c <= '9'+CHAR_OFFSET) {
-			return c - (48 + CHAR_OFFSET);
-		//} else {
-		//	throw new IllegalArgumentException("Invalid hex char: out of range");
-		//}
+		return c - (48 + CHAR_OFFSET);
 	}
 
 	private static char unsignedIntToHex(int i) {
@@ -185,15 +181,6 @@ public class HiddenStringUtil {
 		} else {
 			throw new IllegalArgumentException("Invalid hex int: out of range");
 		}
-		/*
-		if (i >= 0 && i <= 9) {
-			return (char) (i + 48);
-		} else if (i >= 10 && i <= 15) {
-			return (char) (i + 87);
-		} else {
-			throw new IllegalArgumentException("Invalid hex int: out of range");
-		}
-		 */
 	}
 
 	private static byte hexToByte(char hex1, char hex0) {

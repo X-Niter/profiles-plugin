@@ -13,9 +13,12 @@ import com.awooga.ProfilesPaperGui.fsm.events.BukkitCommandEvent;
 import com.awooga.ProfilesPaperGui.util.HiddenStringUtil;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
+import com.google.protobuf.StringValue;
 import lombok.Getter;
 import lombok.SneakyThrows;
 import net.md_5.bungee.api.ChatColor;
+import net.minecraft.server.v1_16_R3.CommandExecute;
+import net.minecraft.server.v1_16_R3.CommandKick;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
@@ -28,12 +31,15 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.event.inventory.InventoryOpenEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.javatuples.Triplet;
 import org.jetbrains.annotations.NotNull;
 
@@ -58,8 +64,8 @@ public class ProfilesCommand2 extends BukkitEventFSM<ProfilesCommandState> imple
 			.to("mainOpened")
 			.onEvent(BukkitCommandEvent.class)
 			.onTransit((from, to, s, event) -> s.toBuilder()
-				.menuMode("SELECT")
-			.build())
+					.menuMode("SELECT")
+					.build())
 		.build())
 
 		// closed
@@ -279,10 +285,6 @@ public class ProfilesCommand2 extends BukkitEventFSM<ProfilesCommandState> imple
 		return Triplet.with(true, null, targetUuid);
 	}
 
-	private void createProfile(Player player) {
-		//System.out.println("TODO: create profile");
-	}
-
 	Map<Player, ChestGui<UUID>> guiMap = new HashMap<>();
 
 	@Getter
@@ -290,7 +292,7 @@ public class ProfilesCommand2 extends BukkitEventFSM<ProfilesCommandState> imple
 		new EventType.ToState("mainOpened"), this::onMainOpen,
 		new EventType.ToAndFromState("mainOpened", "mainOpened"), this::onMainOpen,
 		new EventType.ToState("deleteOpened"), this::onDeleteOpen,
-		new EventType.ToAndFromState("deleteOpened", "deleteOpened"), this::onDeleteOpen,
+		//new EventType.ToAndFromState("deleteOpened", "deleteOpened"), this::onDeleteOpen,
 		new EventType.ToState("closed"), this::onClose
 	);
 
@@ -309,6 +311,7 @@ public class ProfilesCommand2 extends BukkitEventFSM<ProfilesCommandState> imple
 		final Integer userMaxSlots = this.getUserMaxSlots(player);
 		final Integer maxSlots = this.getMaxSlots();
 		AtomicReference<Integer> profileSlotIndex = new AtomicReference<>(0);
+
 		Bukkit.getLogger().info("User "+player.getDisplayName()+" has "+userMaxSlots+"/"+maxSlots+" profile slots");
 
 		ChestGui<UUID> gui = plugin.chestGuiGenerator.createNewGui("gui.profileSelectorMain", (slot, legendName, getText) -> {
@@ -322,21 +325,10 @@ public class ProfilesCommand2 extends BukkitEventFSM<ProfilesCommandState> imple
 				boolean isSelectedProfile = player.getUniqueId().equals(tProfile.map(ProfileEntity::getProfileUuid).orElse(null));
 
 
-				/*
-				Player dummyPlayer = isEmptyProfile ? player : ProfilePlayerImpl.builder()
-					.actualPlayer(player)
-					.overrideUuid(tProfile)
-				.build();
-				*/
-
 				Optional<OfflinePlayer> dummyPlayer = tProfile.map(tProfile2 -> Bukkit.getOfflinePlayer(tProfile2.getProfileUuid()));
 
 				String key = "slotEmpty";
-				/*
-				String titleKey = "slotEmpty.title";
-				String bodyKey = "slotEmpty.body";
-				String material = "slotEmpty.material";
-				*/
+
 				if("DELETE".equals(state.getMenuMode()) && tProfile.isPresent() && genuineUuid.equals(tProfile)) {
 					key = "slotBlockedFromDeletion";
 					tProfile = Optional.empty();
@@ -475,14 +467,13 @@ public class ProfilesCommand2 extends BukkitEventFSM<ProfilesCommandState> imple
 			UUID genuineUuid = plugin.playerProfilesDAO.getGenuineUUID(player);
 			if(player.getUniqueId().equals(genuineUuid)) {
 				Bukkit.getScheduler().runTask(plugin, bukkitTask -> {
-					String[] args = {};
-					this.onCommand(player, plugin.getCommand("profiles"), "", args);
+					player.performCommand("profiles");
 				});
 			}
 		}
 	}
 
-	@EventHandler(priority=EventPriority.LOWEST)
+	@EventHandler
 	public void onPlayerMoveEvent(PlayerMoveEvent event) {
 		Player player = event.getPlayer();
 		if (plugin.getConfig().getBoolean("options.disableMojangProfile", true)) {
@@ -495,36 +486,55 @@ public class ProfilesCommand2 extends BukkitEventFSM<ProfilesCommandState> imple
 	}
 
 
-	@EventHandler(priority=EventPriority.LOWEST)
+	@EventHandler
 	public void onPlayerRespawnEvent(PlayerRespawnEvent event) {
 		Player player = event.getPlayer();
-		Bukkit.getScheduler().runTaskLater(plugin, bukkitTask -> {
-			if(plugin.getConfig().getBoolean("options.disableMojangProfile", true)) {
-				UUID genuineUuid = plugin.playerProfilesDAO.getGenuineUUID(player);
-				if(player.getUniqueId().equals(genuineUuid)) {
-					player.sendMessage(ChatColor.GRAY + "Opening the profile selector automatically...");
+		if (plugin.getConfig().getBoolean("options.disableMojangProfile", true)) {
+			UUID genuineUuid = plugin.playerProfilesDAO.getGenuineUUID(player);
+			if (player.getUniqueId().equals(genuineUuid)) {
+				player.sendMessage(ChatColor.BLUE + "Please select your character!");
+				Bukkit.getScheduler().runTask(plugin, bukkitTask -> {
 					String[] args = {};
-					this.onCommand(player, plugin.getCommand("profiles"), "", args);
-				}
+					this.onCommand(player, null, "", args);
+				});
+			} else {
+				player.showPlayer(plugin, player);
+				player.setAllowFlight(false);
+				player.setFlying(false);
+				player.removePotionEffect(PotionEffectType.BLINDNESS);
 			}
-		}, 20);
+		}
 	}
 
 	@EventHandler
 	public void onPlayerConnect(PlayerJoinEvent event) {
-		Bukkit.getLogger().info("&bGOT PLAYER CONNECT EVENT");
 		Player player = event.getPlayer();
-		Bukkit.getScheduler().runTaskLaterAsynchronously(plugin, bukkitTask -> {
-			if(plugin.getConfig().getBoolean("options.disableMojangProfile", true)) {
-				UUID genuineUuid = plugin.playerProfilesDAO.getGenuineUUID(player);
-				if(player.getUniqueId().equals(genuineUuid)) {
-					player.sendMessage(ChatColor.GRAY + "Opening the profile selector automatically...");
-					String[] args = {};
-					Bukkit.getLogger().info("OnPlayerConnect event sending player to profile selection!");
-					this.onCommand(player, plugin.getCommand("profiles"), "", args);
+		if(plugin.getConfig().getBoolean("options.disableMojangProfile", true)) {
+			UUID genuineUuid = plugin.playerProfilesDAO.getGenuineUUID(player);
+			if(player.getUniqueId().equals(genuineUuid)) {
+				//Bukkit.getScheduler().runTask(plugin, bukkitTask -> {
+				//	String[] args = {};
+				//	this.onCommand(player, null, "", args);
+				//});
+				player.sendMessage(ChatColor.AQUA + "Select your profile!");
+				player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Integer.MAX_VALUE, Integer.MAX_VALUE, true, false, true));
+				if (!player.hasPotionEffect(PotionEffectType.BLINDNESS)) {
+					player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Integer.MAX_VALUE, Integer.MAX_VALUE, true, false, true));
 				}
+				player.hidePlayer(plugin, player);
+				player.setAllowFlight(true);
+				player.setFlying(true);
+				Bukkit.getScheduler().runTaskLater(plugin, () -> {
+					if (!player.hasPotionEffect(PotionEffectType.BLINDNESS)) {
+						player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, Integer.MAX_VALUE, Integer.MAX_VALUE, true, false, true));
+					}
+					player.performCommand("profiles");
+
+				}, 20L);
+			} else {
+				player.kickPlayer("Please log in with authentic Minecraft Account!");
 			}
-		}, 40L);
+		}
 	}
 
 	@EventHandler
@@ -539,17 +549,17 @@ public class ProfilesCommand2 extends BukkitEventFSM<ProfilesCommandState> imple
 		if(args.length == 0) {
 			if (!(sender instanceof Player)) {
 				sender.sendMessage(ChatColor.RED + "/profiles only works for players");
-				return false;
+				return true;
 			}
 			if(!sender.hasPermission("profiles.user")) {
 				sender.sendMessage(ChatColor.RED + "Missing permission to use /profiles: profiles.user");
-				return false;
+				return true;
 			}
 			target = (Player) sender;
 		} else {
 			if(!sender.hasPermission("profiles.user-others")) {
 				sender.sendMessage(ChatColor.RED + "Missing permission to use /profiles [other]: profiles.user-others");
-				return false;
+				return true;
 			}
 			String arg = args[0];
 			target = Bukkit.getPlayer(arg);
@@ -564,16 +574,14 @@ public class ProfilesCommand2 extends BukkitEventFSM<ProfilesCommandState> imple
 		}
 
 		if(target == null) {
-			sender.sendMessage(ChatColor.RED + "Couldn't identify who the target. Usage: /profile [name|uuid]");
-			return false;
+			target = (Player) sender;
 		}
 
 
 		Player finalTarget = target;
 		Bukkit.getScheduler().runTask(plugin, bukkitTask -> {
-			String[] dummyArgs = {};
 			this.removeUser(finalTarget);
-			this.fire(finalTarget, BukkitCommandEvent.builder()
+			this.fire(finalTarget.getPlayer(), BukkitCommandEvent.builder()
 					.args(args)
 					.command(command)
 					.label(label)

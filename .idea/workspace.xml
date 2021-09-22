@@ -22,83 +22,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f6b5723-1a9e-4b55-9ac6-234a284dab9f" name="Default Changelist" comment="1.1.6: Change communication protocol to make uuid switching less confusing for Paper">
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/profiles-paper-gui/profiles.profiles-paper-gui.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profiles-paper-disabler/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesPaperGui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/sql/DbConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/sql/DbCredentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/sql/DbManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/util/ConsoleOutput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/util/ConsoleStringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="5f6b5723-1a9e-4b55-9ac6-234a284dab9f" name="Default Changelist" comment="Java 16 - Spigot 1.16.5 rebuild. Contains GUI on join bug">
       <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/profiles-paper-core/profiles.profiles-paper-core.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/profiles-paper-disabler/profiles.profiles-paper-disabler.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/profiles-waterfall/profiles.profiles-waterfall.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/profiles-waterfall/profiles.profiles-waterfall.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-core/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/java/com/awooga/profiles/ProfilesPaperCoreMessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/core/CoreMessageListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/java/com/awooga/profiles/ProfilesPaperCoreModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/java/com/awooga/profiles/ProfilesPaperCorePlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/java/com/awooga/profiles/ProfilesPaperCoreSDK.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/java/com/awooga/profiles/events/PlayerUUIDOverrideEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/events/PlayerUUIDOverrideEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-core/src/main/resources/plugin.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-disabler/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-disabler/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-disabler/src/main/java/com/awooga/profiles/ProfilesPaperDisablerEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-disabler/src/main/java/com/awooga/profiles/ProfilesPaperDisablerEventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-disabler/src/main/java/com/awooga/profiles/ProfilesPaperDisablerModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-disabler/src/main/java/com/awooga/profiles/ProfilesPaperDisablerModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/dependencies/MMOCore-1.4.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/feature-requests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ConfigurationDelegator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/HookExecutionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/HookExecutionHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilePlayerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilePlayerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesAdminCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesAdminCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesCommand2.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesCommand2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesCommandState.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesCommandState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesPaperGuiEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesPaperGuiEventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesPaperGuiModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesPaperGuiPlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/ProfilesPlaceholderExpansion.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesPlaceholderExpansion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/ChestGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/ChestGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/ChestGuiGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/ChestGuiGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/DefaultStatefulItemStackSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/DefaultStatefulItemStackSupplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/StatefulItemStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/StatefulItemStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/StatefulItemStackSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/StatefulItemStackSupplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/chestgui/TextSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/chestgui/TextSupplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/dao/PlayerProfilesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/dao/PlayerProfilesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/dao/ProfileEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/dao/ProfileEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/dao/impl/PlayerProfilesDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/dao/impl/PlayerProfilesDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/BoundFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/BoundFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/BoundUserFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/BoundUserFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/BukkitEventFSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/BukkitEventFSM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/EventFSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/EventFSM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/core/DumbFSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/core/DumbFSM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/core/EventType.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/core/EventType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/core/OnTransitLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/core/OnTransitLambda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/core/Transition.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/core/Transition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/fsm/events/BukkitCommandEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/events/BukkitCommandEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/profiles/util/HiddenStringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/util/HiddenStringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/resources/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-waterfall/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/ProfilesWaterfallEventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/ProfilesWaterfallEventListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/ProfilesWaterfallModule.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/ProfilesWaterfallPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/ProfilesWaterfall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/SetUUIDCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/SetUUIDCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/UUIDSetterHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/UUIDSetterHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/dao/ProfileDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/dao/ProfileDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/profiles/dao/impl/ProfileDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/java/com/awooga/ProfilesWaterfall/dao/impl/ProfileDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles-waterfall/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-waterfall/src/main/resources/plugin.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/HookExecutionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/HookExecutionHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesCommand2.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/ProfilesCommand2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/BukkitEventFSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/BukkitEventFSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/events/BukkitCommandEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/fsm/events/BukkitCommandEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/util/HiddenStringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/profiles-paper-gui/src/main/java/com/awooga/ProfilesPaperGui/util/HiddenStringUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -564,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615155945288</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Java 16 - Spigot 1.16.5 rebuild. Contains GUI on join bug">
+      <created>1632104226614</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1632104226614</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -629,6 +567,7 @@
     <MESSAGE value="1.1.5: small bugfix with sending the uuid" />
     <MESSAGE value="Add Readme and licenses" />
     <MESSAGE value="1.1.6: Change communication protocol to make uuid switching less confusing for Paper" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.1.6: Change communication protocol to make uuid switching less confusing for Paper" />
+    <MESSAGE value="Java 16 - Spigot 1.16.5 rebuild. Contains GUI on join bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Java 16 - Spigot 1.16.5 rebuild. Contains GUI on join bug" />
   </component>
 </project>

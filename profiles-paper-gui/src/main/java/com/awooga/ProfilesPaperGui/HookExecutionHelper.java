@@ -22,8 +22,8 @@ public class HookExecutionHelper {
 		List<String> commands = plugin.getConfig().getStringList("hooks."+hookName);
 		for(String command : commands) {
 			Bukkit.getLogger().info("Running command (unexpanded): "+command);
-			String expandedCommand = PlaceholderAPI.setPlaceholders((OfflinePlayer) player, command);
 
+			String expandedCommand = PlaceholderAPI.setPlaceholders((OfflinePlayer) player, command);
 			Bukkit.getLogger().info("Running command (expanded): "+expandedCommand);
 
 			ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
